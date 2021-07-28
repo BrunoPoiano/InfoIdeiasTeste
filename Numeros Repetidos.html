@@ -1,0 +1,43 @@
+3 - Escreva um programa<br>
+Escreva um programa que preencha um array com 20 números inteiros sorteados entre 1 e 10. Depois informe qual número mais se repetiu e quantas vezes ele se repetiu.
+<br>
+Exemplo
+<br>
+Array sorteado = [2,5,8,2,8,5,3,9,6,3,4,6,3,1,2,1,2,3,7,1]<br>
+O número que mais se repete é o 2. <br>
+Ele se repete 4 vezes<br>
+<br>
+
+<button type="button" onclick="numerosRepetidos();">Verificar</button>
+<script>
+function numerosRepetidos(){
+let valor = ['123456789']
+let numarray = [];
+let qtde  = []
+let teste
+let final
+
+for (let i = 0; i < 20; i++) {
+	var thing = valor[Math.floor(Math.random() * valor.length)];
+    numarray += thing.charAt(Math.floor(Math.random() * thing.length));
+}
+for (let i = 0; i < numarray.length; i++) {
+	qtde[i] = 0
+	for (let y = 0; y < numarray.length; y++) {
+		if(numarray[i] == numarray[y]){
+			qtde[i] = qtde[i] + 1;
+		}
+	}
+    
+    if(i==0){
+    	final = numarray+' O número que mais se repete é o '+ numarray[i] +'. Ele se repete ' + qtde[i] +' vezes'
+    	teste = qtde[i]
+    }else if(teste < qtde[i]){
+    	teste = qtde[i]
+ 		final = numarray+' O número que mais se repete é o '+ numarray[i] +'. Ele se repete ' + teste +' vezes'
+     }
+     
+}
+alert(final)
+}
+</script>  

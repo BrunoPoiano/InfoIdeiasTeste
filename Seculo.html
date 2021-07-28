@@ -1,0 +1,24 @@
+1 - Função SeculoAno($ano)<br>
+Desenvolva uma função que receba como parametro o ano e retorne o século ao qual este ano faz parte. O primeiro século começa no ano 1 e termina no ano 100, o segundo século começa no ano 101 e termina no 200.
+<br>
+Exemplos para teste:
+<br>
+Ano 1905 = século 20
+<br>
+Ano 1700 = século 17
+<br>
+
+<input type="number" placeholder="Type " id="ano">
+<button type="button" onclick="verificarSeculo();">Verificar Seculo</button>
+
+<script>
+  function verificarSeculo() {
+    // Pegando ano 
+    let ano = document.getElementById("ano").value;
+    
+    // Verificando seculo
+   	let	seculo = ano/100;
+        seculo++;
+       alert('O ano '+ ano+ ' Pertence ao seculo: ' + Math.trunc(seculo));
+  }
+</script>

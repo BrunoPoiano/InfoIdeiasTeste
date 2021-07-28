@@ -1,0 +1,28 @@
+2 -Função PrimoInferior($num)
+<br>
+Crie uma função que receba como parâmetro um número inteiro e retorne o maior número primo inferior ao número recebido como parâmetro. Se o argumento for negativo, a função deverá retornar o valor zero.
+<br>
+Exemplo para teste:
+<br>
+Numero 10 = 7
+Número 30 = 29
+<br>
+<input type="number" placeholder="Type " id="num">
+<button type="button" onclick="PrimoInferior();">Verificar Primo Inferior</button>
+
+<script>
+function PrimoInferior(){
+let numeroPrimo = 0;
+
+nextPrime:
+for (let i = 2; i < document.getElementById("num").value; i++) { 
+
+  for (let j = 2; j < i; j++) { 
+    if (i % j == 0) continue nextPrime; 
+  }
+  numeroPrimo = i;
+}
+  alert('O Numero Primo inferior a ' + document.getElementById("num").value+ ' é: ' + numeroPrimo); 
+}
+</script>
+
